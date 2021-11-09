@@ -1,0 +1,20 @@
+package Tugas2.Rekursif;
+
+import java.util.*;
+public class Fibonacci2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int n = input.nextInt();
+        for (int i = 1; i <= n; i++) {
+            System.out.println(fibonacci(i));
+        }
+        System.out.println();
+    }
+    public static int fibonacci(int n){
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
